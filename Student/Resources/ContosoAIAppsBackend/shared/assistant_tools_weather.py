@@ -9,7 +9,7 @@ import json
 import logging
 import os
 from typing import Dict, Any
-from mcp.mcp_weather_client import SyncMCPWeatherClient, MCPClientError
+from weather_mcp.mcp_weather_client import SyncMCPWeatherClient, MCPClientError
 
 # Configure logging
 logger = logging.getLogger(__name__)
