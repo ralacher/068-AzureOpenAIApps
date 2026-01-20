@@ -49,7 +49,7 @@ You can see your balance of available codespace hours on the [GitHub billing pag
 The GitHub Codespace for this hack will host the developer tools, sample application code, configuration files, and other data files needed for this hack. Here are the steps you will need to follow:
 
 - A GitHub repo containing the student resources and Codespace for this hack is hosted here:
-  - [WTH Azure OpenAI Apps Codespace Repo](https://aka.ms/wth/openaiapps/codespace/)
+  - [WTH Azure OpenAI Apps Codespace Repo](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=1137523312&skip_quickstart=true&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json&geo=UsEast)
   - Please open this link and sign in with your personal Github account. 
 
 **NOTE:** Make sure you do not sign in with your enterprise managed Github account.
@@ -69,42 +69,6 @@ Your developer environment is ready, hooray! Skip to section: [Deploy Azure Reso
 **NOTE:** GitHub Codespaces time out after 20 minutes if you are not actively interacting with it in the browser. If your codespace times out, you can restart it and the developer environment and its files will return with its state intact within seconds. If you want to have a better experience, you can also update the default timeout value in your personal setting page on Github. Refer to this page for instructions: [Default-Timeout-Period](https://docs.github.com/en/codespaces/setting-your-user-preferences/setting-your-timeout-period-for-github-codespaces#setting-your-default-timeout-period) 
 
 **NOTE:** Codespaces expire after 30 days unless you extend the expiration date. When a Codespace expires, the state of all files in it will be lost.
-
-#### Use Local Workstation
-
-**NOTE:** You can skip this section and continue on to "Setup Sample Application" if are using GitHub Codespaces!
-
-If you want to setup your environment on your local workstation, expand the section below and follow the requirements listed. 
-
-<details markdown=1>
-<summary markdown="span">Click to expand/collapse Local Workstation Requirements</summary>
-  
-#### Student Resources
-
-The sample application code, Azure deployment scripts, and sample data sources for this hack are available in a Student Resources package.
-
-- [Download and unpack the Resources.zip](https://aka.ms/wth/openaiapps/resources) package to your local workstation.
-
-The rest of the challenges will refer to the relative paths inside the `Resources.zip` file where you can find the various resources to complete the challenges.
-
-#### Set Up Local Dev Container
-
-You will next be setting up your local workstation so that it can use dev containers. A Dev Container is a Docker-based environment designed to provide a consistent and reproducible development setup. The VS Code Dev Containers extension lets you easily open projects inside a containerized environment. 
-
-**NOTE:** On Windows, Dev Containers run in the Windows Subsystem for Linux (WSL). As of May 2025, WSL on Windows ARM64 does not currently support running the Azure Function Core Tools needed for this hackathon in x86_64 emulation using QEMU. IF you are using a Windows on ARM device, you will need to use a GitHub Codespace instead.
-
-On Windows and Mac OS (**NOTE:** only tested on Apple Silicon):
-- Download and install Docker Desktop
-- (Mac OS only) In Docker Desktop settings, choose Apple Virtualization Framework for the Virtual Machine Manager. Also, click the checkbox to use Rosetta for x86_64/amd64 emulation on Apple Silicon
-- (Windows only) Install the Windows Subsystem for Linux along with a Linux distribution such as Ubuntu. You will need to copy the `Resources.zip` to your Linux home directory and unzip it there. 
-- Open the root folder of the Student resource package in Visual Studio Code
-- You should get prompted to re-open the folder in a Dev Container. You can do that by clicking the Yes button, but if you miss it or hit no, you can also use the Command Palette in VS Code and select `Dev Containers: Reopen in Container`
-
-##### Setup GitHub Copilot
-
-For parts of this hack we will be relying heavily on GitHub Copilot for coding. Please setup [VS Code with GitHub Copilot](https://code.visualstudio.com/docs/copilot/setup-simplified?wt.md_id=AZ-MVP-5004796)
-
-</details>
 
 ### Setup Citrus Bus Application
 
