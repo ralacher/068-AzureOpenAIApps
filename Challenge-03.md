@@ -1,6 +1,6 @@
 # Challenge 03 - The Teachers Assistant—Batch Essay Grading
 
-[< Previous Challenge](./Challenge-02.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-04.md)
+[< Previous Challenge](./Challenge-02.md) - **[Home](./README.md)** - [Next Challenge >](./Challenge-04.md)
 
 ## Pre-requisites
 
@@ -28,7 +28,7 @@ First, the app will invoke a custom classifier model in Azure Document Intellige
 
 The data flow for this automation can be seen in the following diagram:
 
-![Document Intelligence Data Pipeline](../images/c3-classification-extraction-data-flow.png)
+![Document Intelligence Data Pipeline](./images/c3-classification-extraction-data-flow.png)
 
 Azure Document Intelligence enables you to create and train custom models that can classify or extract data from documents. These models are trained on sample documents so that they can then do the classification or extraction on production documents.
 
@@ -51,7 +51,7 @@ There is also a container called **`classifications`**. This container contains 
 
 You will use the copies of these sample documents for training the custom classifier and extractors in Azure Document Intelligence as shown in the diagram below:
 
-![Image of where files are store in Azure Storage](../images/c3-train-classification-extraction-models.png)
+![Image of where files are store in Azure Storage](./images/c3-train-classification-extraction-models.png)
 
 **NOTE:** You can find the source files which were used to populate the Azure storage account in your Codespace or Student Resources package in the sub-folders under the **`/data/contoso-education`** folder. These files were pre-loaded into Azure Storage by the deployment script you ran in Challenge 0 and are there only for reference.
 

@@ -1,6 +1,6 @@
 # Challenge 02 - Weather Integration Using Model Context Protocol
 
-[< Previous Challenge](./Challenge-01.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-03.md)
+[< Previous Challenge](./Challenge-01.md) - **[Home](./README.md)** - [Next Challenge >](./Challenge-03.md)
 
 ## Introduction
 
@@ -18,7 +18,7 @@ The Donald & Callum assistants are fully implemented and you will explore their 
 ### What is Model Context Protocol (MCP)?
 MCP is an open protocol that allows us to standardize how tools and data is provided to LLMs. Before MCP, one would have to do custom integrations for tools based on the specific APIs and models that are being used. However, with MCP you can make one server which has the tools, and the agents can directly talk to the server and access those tools in a standardized way. Below is a diagram of how MCP works (credit to Anthropic for the diagram).
 
-![screenshot of General MCP Diagram](../images/General-MCP-Architecture.png)
+![screenshot of General MCP Diagram](./images/General-MCP-Architecture.png)
 
 ### Components of MCP
 
@@ -30,7 +30,7 @@ MCP is an open protocol that allows us to standardize how tools and data is prov
 
 ### Security in Model Context Protocol (MCP)?
 
-There are many security aspects to consider when using MCP for enterprise applications, your coach should cover these during the lecture for this challenge. There is also a link provided in the Learning Resources section below about security, that you can read for more guidance and details..
+There are many security aspects to consider when using MCP for enterprise applications, your coach should cover these during the lecture for this challenge. There is also a link provided in the Learning Resources section below about security, that you can read for more guidance and details.
 
 ## Description
 
@@ -84,11 +84,11 @@ In the `/data` folder you will find a set of documentation files that were gener
 
 #### How All the Assistants (Except Veta) Currently Work
 
-![screenshot of Priscilla Sequence Diagram](../images/PriscillaAssistant.jpg)
+![screenshot of Priscilla Sequence Diagram](./images/PriscillaAssistant.jpg)
 
 #### How Veta Will Work After Implementing MCP Server
 
-![screenshot of Veta Sequence Diagram](../images/Veta-ADS.png)
+![screenshot of Veta Sequence Diagram](./images/Veta-ADS.png)
 
 #### Initialization Sequence
 

@@ -1,6 +1,6 @@
 # Challenge 05 - Performance and Cost and Optimizations
 
-[< Previous Challenge](./Challenge-04.md) - **[Home](../README.md)** 
+[< Previous Challenge](./Challenge-04.md) - **[Home](./README.md)** 
 
 ## Pre-requisites
 
@@ -57,7 +57,7 @@ Using the file uploader, re-upload all the files to the government blob containe
 
 Please note that it may take up to 5 minutes for your custom log events from the app to show up in Azure Application Insights.
 
-![Application Insights](../images/app-insights.png)
+![Application Insights](./images/app-insights.png)
 
 In app insights, you should see the following events registered for each document and yacht you have modified respectively:
 - **`SKIP_YACHT_EMBEDDING_COMPUTE`**
@@ -86,7 +86,7 @@ GET document_embeddings_cache_government/definition.txt
 
 ````
 
-![Application Insights](../images/redis-embeddings.png)
+![Application Insights](./images/redis-embeddings.png)
 
 ## Success Criteria
 

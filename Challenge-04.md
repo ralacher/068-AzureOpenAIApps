@@ -1,6 +1,6 @@
 # Challenge 04 - Quota Monitoring and Enforcement
 
-[< Previous Challenge](./Challenge-03.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-05.md)
+[< Previous Challenge](./Challenge-03.md) - **[Home](./README.md)** - [Next Challenge >](./Challenge-05.md)
 
 ## Pre-requisites
 
@@ -26,7 +26,7 @@ To ensure fair access to the LLMs, the Citrus Bus app has implemented a set of A
  
 You can see how this system is set up in the diagram below:
 
-![Exam grading & LLM Quota Enforcement Flow](../images/c4-exam-grading-flow.png)
+![Exam grading & LLM Quota Enforcement Flow](./images/c4-exam-grading-flow.png)
 
 To summarize this flow:
 

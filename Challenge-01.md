@@ -1,6 +1,6 @@
 # Challenge 01 - Auto-Vectorization: Automatic Processing of Document Embeddings from Data Sources
 
-[< Previous Challenge](./Challenge-00.md) - **[Home](../README.md)** - [Next Challenge >](./Challenge-02.md)
+[< Previous Challenge](./Challenge-00.md) - **[Home](./README.md)** - [Next Challenge >](./Challenge-02.md)
 
 ## Pre-requisites
 
@@ -16,7 +16,7 @@ The Citrus Bus application uses the RAG (Retrieval Augmented Generation) archite
 
 In an app using the RAG architecture pattern, the application ***retrieves*** information from a retrieval system that queries the organization's data. The application then provides that data to ***augment*** and ground a LLM with knowledge so that the LLM can ***generate*** content that powers the virtual assistants.
 
-![RAG Architecture Pattern](../images/rag-pattern-generic.png)
+![RAG Architecture Pattern](./images/rag-pattern-generic.png)
 
 The retrieval system is implemented by indexing structured and unstructured data, from the its source locations, into a vectorized data store which can be queried by the application. Thus, the vector data store used by the retrieval system is not the original source of truth.
 
@@ -44,7 +44,7 @@ Contoso Yachts stores documents about the islands in Azure Blob storage and info
 
 Automatically detecting document changes in Azure Blob Store and Azure Cosmos DB is of paramount importance as it facilitates the continuous and real-time update of document embeddings through the Azure OpenAI embedding service. 
 
-![Auto Vectorization](../images/auto-vectorization-1.drawio.svg)
+![Auto Vectorization](./images/auto-vectorization-1.drawio.svg)
 
 In the diagram above, the following sequence of activities are taking place:
 - Step 1: Newly inserted or modified documents in Azure Blob Store and Cosmos DB trigger Azure Functions
@@ -131,19 +131,19 @@ Each request should return a 200 HTTP status code.
 
 This shows how to create or update existing yacht records in the database via the REST API:
 
-![How to Create Yacht records](../images/humao-rest-client-create-yachts.png)
+![How to Create Yacht records](./images/humao-rest-client-create-yachts.png)
 
 This shows how to retrieve existing yacht records from the database via the REST API:
 
-![How to Retrieve Yacht records](../images/humao-rest-client-retrieve-yachts.png)
+![How to Retrieve Yacht records](./images/humao-rest-client-retrieve-yachts.png)
 
 This shows how to remove existing yacht records from the database via the REST API:
 
-![How to delete/remove yacht records](../images/humao-rest-client-delete-yachts.png)
+![How to delete/remove yacht records](./images/humao-rest-client-delete-yachts.png)
 
 There are in-file variables that you may have to edit to control the destination and contents of the HTTP requests you are making to the back end service:
 
-![HTTP Request Variables](../images/humao-rest-client-in-file-variables.png)
+![HTTP Request Variables](./images/humao-rest-client-in-file-variables.png)
 
 The `api_endpoint` controls the destination of the http request, the `conversation_id` variable is used to keep track of different requests to the back end and the `yacht_id` specifies the specific yacht record we are targeting
 
@@ -166,7 +166,7 @@ Each JSON request submission to the Yacht management REST API should also trigge
 
 You should be able to search for the documents in Azure AI Search, as shown in the screenshot below:
 
-![HTTP Request Variables](../images/contoso_yachts_index_search.png)
+![HTTP Request Variables](./images/contoso_yachts_index_search.png)
 
 ### Modify Data and Observe Azure AI Search
 
