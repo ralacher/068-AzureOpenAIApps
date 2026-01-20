@@ -13,7 +13,6 @@ In this challenge, you will setup the necessary pre-requisites and environment t
 - [Access Azure Subscription](#access-azure-subscription)
 - [Setup Development Environment](#setup-development-environment)
   - [Use GitHub Codespaces](#use-github-codespaces)
-  - [Use Local Workstation](#use-local-workstation)
 - [Setup Citrus Bus Application](#setup-citrus-bus-application)
   - [Deploy Azure Resources](#deploy-azure-resources)
   - [Setup App Backend and Frontend](#setup-app-backend-and-frontend)
@@ -34,7 +33,6 @@ You can use GitHub Codespaces where we have a pre-configured development environ
 A GitHub Codespace is a development environment that is hosted in the cloud that you access via a browser. All of the pre-requisite developer tools for this hack are pre-installed and available in the codespace.
 
 - [Use GitHub Codespaces](#use-github-codespaces)
-- [Use Local Workstation](#use-local-workstation)
 
 **NOTE:** We highly recommend using GitHub Codespaces to make it easier to complete this hack.
 
@@ -97,33 +95,6 @@ The deployment script uses the Azure PowerShell Commandlets to log into your Azu
 
 **NOTE:** Logging into your Azure subscription with PowerShell or the Azure CLI from a GitHub Codespace requires a Device Login Code. Some Azure subscriptions may block this method of authentication. For subscriptions where authentication with a Device Login Code is not permitted, you will need to create and use an Azure Service Principal to login from GitHub Codespaces.
 
-##### Setup Service Principal
-
-If your Azure subscription does not allow authentication with a Device Login Code, expand the hidden section below to learn how to create an Azure Service Principal.
-
-**NOTE:** Microsoft FTEs with an internal Azure subscription in the FDPO Entra ID tenant will need to use a Service Principal so that they can log in to the Azure CLI. 
-
-<details markdown="1">
-<summary markdown="span">Click to expand/collapse Setup Service Principal Requirements </summary>
-
-To create an Azure Service Principal, we recommend using the [Azure Cloud Shell](https://shell.azure.com) in your browser. You will then collect the login details and use them to run the sample application's deployment script from your GitHub Codespace or local workstation.
-
-Run the following command to create a service principal with the Contributor role on the subscription. Replace the `<NAME>` with a meaningful name.  Replace the subscription ID (`00000000-0000-0000-0000-000000000000`) with your Azure subscription ID.
-
-  ````bash
-  az ad sp create-for-rbac --name <NAME> --role contributor --scopes /subscriptions/00000000-0000-0000-0000-000000000000
-  ````
-  Your output should look something like this:
-
-  ![Service Principal](/068-AzureOpenAIApps/images/service-principle.png)
-
-<b>Make sure you save the output of the above command as you will need it later.</b>
-<br>If you get an error when you try to create the service principal due to Azure Policy, you will have to use these steps as an alternative:
-* Open your Codespace in Visual Studio Code Desktop
-* Open Terminal and run this command `CODESPACES=false`
-* Continue to the next section. When the script executes `az login`, you should NOT be using a device code and will instead be prompted in the browser to authenticate to your Azure subscription using the normal authentication method.
-</details>
-
 ##### Provisioning Azure Resources
 
 Execute the following commands in your GitHub Codespace or local workstation terminal window:
@@ -137,26 +108,6 @@ chmod +x deploy.sh
 - `subscription-id`: The ID of the Azure Subscription where you want to deploy the resources
 - `resource-group-name`: The name of the resource group where you want to deploy the resources. It will be created for you when you run the deployment script. 
 - `tenant-id`: The Tenant ID associated with your Azure subscription where you want to deploy the resources
-
-**NOTE:** Additional parameters are required if you are using a service principal to deploy the resources.  Expand the hidden section below for instructions.
-
-<details markdown="1">
-<summary markdown="span">Click to expand/collapse Provision Azure Resources with a Service Principal</summary>
-
-**NOTE:** Do not run these steps in Azure Cloud Shell. Use the terminal in your GitHub Codespace or local workstation!
-
-```bash
-cd infra
-chmod +x deploy.sh
-./deploy.sh --subscription-id "[subscription-id]" --resource-group-name "[resource-group-name]" --tenant-id "[tenant-id]" --use-service-principal --service-principal-id "[service-principal-id]" --service-principal-password "[service-principal-password]"
-```
-- `subscription-id`: The ID of the Azure Subscription where you want to deploy the resources
-- `resource-group-name`: The name of the resource group where you want to deploy the resources. It will be created for you when you run the deployment script. 
-- `service-principal-id`: The App ID
-- `service-principal-password`: The Service Principal Password
-- `tenant-id`: The Tenant ID associated with your Azure subscription where you want to deploy the resources
-
-</details>
 
 The deployment process takes about 30 minutes to complete.
 
