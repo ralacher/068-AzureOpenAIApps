@@ -53,7 +53,7 @@ The GitHub Codespace for this hack will host the developer tools, sample applica
 **NOTE:** Make sure you do not sign in with your enterprise managed Github account.
 
 Once you are signed in:
-- Verify that the `Dev container configuration` drop down is set to `068-AzureOpenAIApps`
+- Verify that the `Dev container configuration` drop down is set to `What the Hack AI Apps`
 - Click on the green "Create Codespace" button.
 
 Your Codespace environment should load in a new browser tab. It will take approximately 3-5 minutes the first time you create the codespace for it to load.
