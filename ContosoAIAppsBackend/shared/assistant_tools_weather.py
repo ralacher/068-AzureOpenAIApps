@@ -25,7 +25,7 @@ def _get_mcp_client() -> SyncMCPWeatherClient:
         # Get the path to the MCP weather server script
         current_dir = os.path.dirname(os.path.abspath(__file__))
         backend_dir = os.path.dirname(current_dir)
-        server_script_path = os.path.join(backend_dir, "mcp", "mcp_weather_server.py")
+        server_script_path = os.path.join(backend_dir, "weather_mcp", "mcp_weather_server.py")
         
         _mcp_client = SyncMCPWeatherClient(server_script_path)
     
